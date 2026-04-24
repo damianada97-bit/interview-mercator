@@ -1,10 +1,4 @@
 
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package com.mycompany.interview;
 
 import org.junit.jupiter.api.Test;
@@ -36,5 +30,9 @@ class CheckoutServiceTest {
     void mixedExampleFromSpec() {
         assertEquals(145, checkoutService.checkout(
                 List.of("Apple", "Apple", "Orange", "Apple")));
+    }
+    @Test
+    void emptyCartShouldReturnZero() {
+        assertEquals(0, checkoutService.checkout(List.of()));
     }
 }
